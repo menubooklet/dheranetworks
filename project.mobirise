@@ -41,7 +41,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 10,
+    "uniqCompNum": 11,
     "versionPublish": "5.9.18",
     "screenshot": "screenshot.png"
   },
@@ -49,8 +49,8 @@
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Home",
-        "meta_descr": "",
+        "title": "[ Dhera Networks ]",
+        "meta_descr": "Software, finance and accounting services",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
@@ -1184,6 +1184,184 @@
                 "padding": "0 12px"
               }
             },
+            ".row": {
+              "justify-content": "center"
+            },
+            ".title-wrapper": {
+              ".mbr-section-title": {
+                "margin-bottom": "40px",
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "24px"
+                }
+              }
+            },
+            ".image-wrapper": {
+              "display": "flex",
+              "justify-content": "center",
+              "img": {
+                "height": "61px",
+                "object-fit": "contain",
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "16px"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#222222",
+              "text-align": "center"
+            }
+          },
+          "_name": "clients1",
+          "_sourceTheme": "programm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"clients1 programm5\" group=\"Clients\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"range\" inline title=\"Images Amount\" name=\"cards\" min=\"1\" max=\"6\" step=\"1\" value=\"4\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ecf7fd\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n                        Our customers\n                    </h2>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 col-md-6\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/logo-1-376x297.png\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 col-md-6\" mbr-if=\"cards > 1\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/snapedit-1733353724373-376x421.png\" alt=\"Suguna\">\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 col-md-6\" mbr-if=\"cards > 2\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/snapedit-1733354259965-376x257.png\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 col-md-6\" mbr-if=\"cards > 3\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/snapedit-1708480961812-131x95.png\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 col-md-6\" mbr-if=\"cards > 4\">\n                <div class=\"image-wrapper\">\n                    <img src=\"../_images/program/5.png\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-2 col-md-6\" mbr-if=\"cards > 5\">\n                <div class=\"image-wrapper\">\n                    <img src=\"../_images/program/1.png\" alt=\"Mobirise\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uw22E8Ili1",
+          "_anchor": "clients1-a",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "& when (@fullWidth)": {
+              ".container-fluid": {
+                "padding": "0 40px",
+                "@media (max-width: 992px)": {
+                  "padding": "0 16px"
+                },
+                "@media (max-width: 768px)": {
+                  "padding": "0 12px"
+                }
+              }
+            },
+            ".container": {
+              "@media (max-width: 992px)": {
+                "padding": "0 16px"
+              },
+              "@media (max-width: 768px)": {
+                "padding": "0 12px"
+              }
+            },
+            ".title-wrapper": {
+              ".mbr-section-title": {
+                "margin-bottom": "24px"
+              }
+            },
+            ".list": {
+              "margin": "0",
+              "list-style-type": "none",
+              "padding-left": "0",
+              "li": {
+                "margin-bottom": "1rem",
+                "position": "relative",
+                "& when (@showMark)": {
+                  "padding-left": "36px",
+                  "&:before": {
+                    "position": "absolute",
+                    "top": "8px",
+                    "left": "0",
+                    "content": "\"✓\"",
+                    "display": "flex",
+                    "justify-content": "center",
+                    "align-items": "center",
+                    "color": "@mark",
+                    "background-color": "@markBg",
+                    "width": "22px",
+                    "height": "22px",
+                    "font-size": "14px",
+                    "border-radius": "50%"
+                  }
+                }
+              },
+              "color": "#222222"
+            },
+            ".mbr-section-title": {
+              "color": "#222222"
+            }
+          },
+          "_name": "content6",
+          "_sourceTheme": "programm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content6 programm5\" group=\"List\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"List Mark\" name=\"showMark\" checked>\n        <input type=\"color\" title=\"Mark Color\" value=\"#ffffff\" name=\"mark\" condition=\"showMark\" selected>\n        <input type=\"color\" title=\"Mark BG\" value=\"#E3B4FA\" name=\"markBg\" condition=\"showMark\" selected>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-4\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">Why Choose Dheranetworks?</h2>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-8\">\n                <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n                    <li class=\"item-wrap\"><b>High Quality</b>: Our commitment to excellence ensures that every project and service meets the highest standards.</li>\n                    <li class=\"item-wrap\"><b>Tailored Solutions</b>: We understand that each business is unique, and we customize our services to fit your specific needs.</li>\n                    <li class=\"item-wrap\"><b>Expert Team</b>: With years of experience across various industries, our professionals bring expertise and dedication to every task.</li>\n                    <li class=\"item-wrap\"><b>Client-Centric Approach</b>: Your success is our priority, and we work closely with you to ensure we’re aligned with your goals.</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uqG4Qv1hmU",
+          "_anchor": "content6-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "& when (@fullWidth)": {
+              ".container-fluid": {
+                "padding": "0 40px",
+                "@media (max-width: 992px)": {
+                  "padding": "0 16px"
+                },
+                "@media (max-width: 768px)": {
+                  "padding": "0 12px"
+                }
+              }
+            },
+            ".container": {
+              "@media (max-width: 992px)": {
+                "padding": "0 16px"
+              },
+              "@media (max-width: 768px)": {
+                "padding": "0 12px"
+              }
+            },
             ".title-wrapper": {
               "@media (max-width: 992px)": {
                 "margin-bottom": "24px"
@@ -1301,100 +1479,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = 'video')": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            "& when (@fullWidth)": {
-              ".container-fluid": {
-                "padding": "0 40px",
-                "@media (max-width: 992px)": {
-                  "padding": "0 16px"
-                },
-                "@media (max-width: 768px)": {
-                  "padding": "0 12px"
-                }
-              }
-            },
-            ".container": {
-              "@media (max-width: 992px)": {
-                "padding": "0 16px"
-              },
-              "@media (max-width: 768px)": {
-                "padding": "0 12px"
-              }
-            },
-            ".title-wrapper": {
-              ".mbr-section-title": {
-                "margin-bottom": "24px"
-              }
-            },
-            ".list": {
-              "margin": "0",
-              "list-style-type": "none",
-              "padding-left": "0",
-              "li": {
-                "margin-bottom": "1rem",
-                "position": "relative",
-                "& when (@showMark)": {
-                  "padding-left": "36px",
-                  "&:before": {
-                    "position": "absolute",
-                    "top": "8px",
-                    "left": "0",
-                    "content": "\"✓\"",
-                    "display": "flex",
-                    "justify-content": "center",
-                    "align-items": "center",
-                    "color": "@mark",
-                    "background-color": "@markBg",
-                    "width": "22px",
-                    "height": "22px",
-                    "font-size": "14px",
-                    "border-radius": "50%"
-                  }
-                }
-              },
-              "color": "#222222"
-            },
-            ".mbr-section-title": {
-              "color": "#222222"
-            }
-          },
-          "_name": "content6",
-          "_sourceTheme": "programm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content6 programm5\" group=\"List\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"List Mark\" name=\"showMark\" checked>\n        <input type=\"color\" title=\"Mark Color\" value=\"#ffffff\" name=\"mark\" condition=\"showMark\" selected>\n        <input type=\"color\" title=\"Mark BG\" value=\"#E3B4FA\" name=\"markBg\" condition=\"showMark\" selected>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-4\">\n                <div class=\"title-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">Why Choose Dheranetworks?</h2>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-8\">\n                <ul class=\"list mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n                    <li class=\"item-wrap\"><b>High Quality</b>: Our commitment to excellence ensures that every project and service meets the highest standards.</li>\n                    <li class=\"item-wrap\"><b>Tailored Solutions</b>: We understand that each business is unique, and we customize our services to fit your specific needs.</li>\n                    <li class=\"item-wrap\"><b>Expert Team</b>: With years of experience across various industries, our professionals bring expertise and dedication to every task.</li>\n                    <li class=\"item-wrap\"><b>Client-Centric Approach</b>: Your success is our priority, and we work closely with you to ensure we’re aligned with your goals.</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "uqG4Qv1hmU",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "content6-9"
-        },
-        {
           "_name": "footer01",
           "_sourceTheme": "glassm5",
           "_styles": {
@@ -1456,7 +1540,7 @@
               "text-align": "right"
             }
           },
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background5.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row align-center mbr-white\">\n            <div class=\"col-lg-6 col-md-12 row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-left\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\">\n                    © Copyright 2024 Dheranetworks. All Rights Reserved.\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-12 row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".foot-menu-item\"></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".foot-menu-item\">\n                        <a href=\"index.html#header1-1\" class=\"text-success text-primary\">Twitter</a>\n                    </li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".foot-menu-item\">\n                        <a href=\"index.html#header1-1\" class=\"text-success text-primary\">Instagram</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer3\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background5.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row align-center mbr-white\">\n            <div class=\"col-lg-6 col-md-12 row-copirayt\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style mbr-white align-left\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\">\n                    © Copyright 2024-2025 Dheranetworks. All Rights Reserved.\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-12 row-links\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list mbr-list-grow=\"menuItems\">\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".foot-menu-item\"></li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".foot-menu-item\">\n                        <a href=\"index.html#header1-1\" class=\"text-success text-primary\">Twitter</a>\n                    </li>\n                    <li mbr-text class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".foot-menu-item\">\n                        <a href=\"index.html#header1-1\" class=\"text-success text-primary\">Instagram</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
           "_anchor": "footer01-4",
           "_isUserblock": true,
           "_cid": "uqAcLwqmOv",
